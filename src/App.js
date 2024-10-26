@@ -2,7 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import {useStore, StoreContext, StoreProvider, actions} from "./store";
 import {useRef} from "react";
+import {Routes, Route, Link} from 'react-router-dom'
 import Videos from  './Videos';
+import HomePage from './pages/Home';
+import NewsPage from './pages/News';
+import ContactPage from './pages/Contact';
 
 function App() {
     const [state, dispatch] = useStore();
@@ -56,6 +60,25 @@ function App() {
                 }
 
             </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <Link to={'/'}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to={'/news'}>new</Link>
+                    </li>
+                    <li>
+                        <Link to={'/contact'}>Contact</Link>
+                    </li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path={'/'} element={<HomePage />}/>
+                <Route path={'/news'} element={<NewsPage />}/>
+                <Route path={'/contact'} element={<ContactPage />}/>
+            </Routes>
         </div>
     );
 }
