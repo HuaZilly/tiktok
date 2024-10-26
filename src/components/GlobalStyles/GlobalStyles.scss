@@ -1,0 +1,45 @@
+@import "normalize.css";
+
+@font-face {
+  font-family: 'Tiktok';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: './assets/fonts/tiktok/TikTokDisplay-Regular.otf' format('otf');
+}
+
+@font-face {
+  font-family: 'Tiktok';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: './assets/fonts/tiktok/TikTokDisplay-Medium.otf' format('otf');
+}
+
+@font-face {
+  font-family: 'Tiktok';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: './assets/fonts/tiktok/TikTokDisplay-Bold.otf' format('otf');
+}
+
+
+:root {
+  --primary: #fe2c55
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Tiktok', sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+}
